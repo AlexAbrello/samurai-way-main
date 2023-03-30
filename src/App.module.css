@@ -7,3 +7,10 @@
   height: 100vh;
   background-color: rgb(220, 219, 219);
 }
+.container {
+  margin: 0 auto;
+  max-width: 1200px;
+  display: flex;
+}
+
+
