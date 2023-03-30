@@ -1,12 +1,13 @@
-import './App.css';
-import Header from './components/Header';
-import Technologies from './components/Technologies';
+import style from './App.module.css'
+
+import { Content } from './components/body/Content';
+import { Header } from './components/header/Header';
 
 function App() {
   return (
-    <div className="App">
+    <div className={style.wrapper}>
       <Header />
-      <Technologies />
+      <Content />
     </div>
   );
 }

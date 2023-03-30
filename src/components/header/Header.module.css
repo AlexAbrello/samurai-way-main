@@ -1,0 +1,6 @@
+.header {
+   width: 100%;
+   box-shadow: inset 2px 2px 15px #000, inset -2px -2px 15px #000, 0 5px 10px #346d94;
+   background-color: #474747;
+   height: 50px;
+}
