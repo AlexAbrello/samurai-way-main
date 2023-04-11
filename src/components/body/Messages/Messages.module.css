@@ -1,0 +1,12 @@
+.wrapper {
+    display: flex;
+}
+.nameList {
+    width: 200px;
+    padding-top: 10px;
+    padding-left: 20px;
+    border-right: 1px solid white;
+}
+a.activeLink {
+    color: yellow;
+}
