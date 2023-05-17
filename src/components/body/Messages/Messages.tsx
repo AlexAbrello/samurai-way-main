@@ -31,6 +31,7 @@ export const Messages = () => {
         <div>
           {messages}
         </div>
+        <input type="text"/>
       </div>
   )
 }

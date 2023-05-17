@@ -8,6 +8,7 @@ import {News} from "./components/body/News/News";
 import {BrowserRouter, Route} from "react-router-dom";
 
 function App() {
+
   return (
       <BrowserRouter>
         <div className={style.wrapper}>
@@ -15,9 +16,9 @@ function App() {
           <div className={style.container}>
             <Navigation/>
             <div className={style.contentWrapper}>
-              <Route path='/profile' component={Profile}/>
-              <Route path='/messages' component={Messages}/>
-              <Route path='/news' component={News}/>
+              <Route path='/profile' component={ () => <Profile />}/>
+              <Route path='/messages' component={() => <Messages />}/>
+              <Route path='/news' component={() => <News />}/>
             </div>
           </div>
         </div>
