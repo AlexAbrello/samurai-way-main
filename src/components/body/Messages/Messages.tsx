@@ -32,6 +32,7 @@ export const Messages = () => {
           {messages}
         </div>
         <input type="text"/>
+        <button>+</button>
       </div>
   )
 }
