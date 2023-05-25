@@ -23,7 +23,7 @@ export const initialState: InitialStateType = {
 export const messagesReducer = (initialState: InitialStateType, action: MessageReducerType): InitialStateType => {
   switch (action.type) {
     case 'ADD-MESSAGE': {
-      return {...initialState, dialogs: [...initialState["dialogs"], {id: action.payload.id, text: action.payload.text}]}
+      return {...initialState, dialogs: [...initialState["dialogs"], {id: 3, text: action.payload.text}]}
     }
     default:
       return initialState
@@ -34,11 +34,10 @@ type MessageReducerType = AddMessageType
 
 type AddMessageType = ReturnType<typeof addMessageAC>
 
-export const addMessageAC = (id: number, text: string) => {
+export const addMessageAC = (text: string) => {
   return {
     type: 'ADD-MESSAGE',
     payload: {
-      id,
       text
     }
   } as const

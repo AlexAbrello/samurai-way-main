@@ -1,6 +1,8 @@
 import DialogItem, {DialogItemType} from "./DialogItem";
 import Message, {MessageType} from "./Message";
 import style from './Messages.module.css'
+import React from "react";
+import {addMessageAC} from "../../../reducers/messagesReducer";
 
 type DialogDataType = DialogItemType[]
 type MessagesDataType = MessageType[]
@@ -23,6 +25,15 @@ export const Messages = () => {
   const dialogs = dialogData.map(e => <DialogItem name={e.name} id={e.id}/>)
   const messages = messagesData.map(e => <Message id={e.id} text={e.text}/>)
 
+  let newMessage: React.RefObject<HTMLInputElement> = React.createRef()
+
+  const addNewMessage = () => {
+    let text = newMessage.current?.value
+    if (text) {
+      addMessageAC(text)
+    }
+  }
+
   return (
       <div className={style.wrapper}>
         <div className={style.nameList}>
@@ -31,8 +42,8 @@ export const Messages = () => {
         <div>
           {messages}
         </div>
-        <input type="text"/>
-        <button>+</button>
+        <input ref={newMessage}/>
+        <button onClick={addNewMessage}>+</button>
       </div>
   )
 }
